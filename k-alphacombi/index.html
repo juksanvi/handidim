@@ -1,1 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP AlphaCombi — Read Korean Lyrics at Your Next Concert</title>
+    <meta name="description"
+        content="Turn any K-POP Korean lyrics into alphabet letters you can actually read. Free app for iOS and Android. Perfect for concert chanting.">
+    <meta property="og:title" content="K-POP AlphaCombi">
+    <meta property="og:description"
+        content="Your concert is coming. Can you sing along? Turn Korean lyrics into readable alphabet letters.">
+    <meta property="og:image" content="images/app-icon.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: HERO                              -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/app-icon.png" alt="K-POP AlphaCombi icon" class="hero-icon">
+                <span class="hero-app-name">K-POP AlphaCombi</span>
+            </div>
+            <h1>Your Concert Is Coming.<br><span class="accent">Can You Sing Along?</span></h1>
+            <p class="hero-sub">K-POP AlphaCombi turns Korean lyrics into alphabet letters you can read<br>— so you can
+                chant with the crowd, not just watch.</p>
+            <div class="store-badges">
+                <a href="#" class="store-badge" aria-label="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store">
+                </a>
+                <a href="#" class="store-badge" aria-label="Get it on Google Play">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get it on Google Play">
+                </a>
+            </div>
+            <p class="hero-note">Free to use · No Korean knowledge needed</p>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: PAIN POINT                        -->
+    <!-- ============================================ -->
+    <section id="pain" class="section section-white">
+        <div class="container">
+            <h2>You Know Every Note.<br><span class="accent">But the Korean Parts?</span></h2>
+            <div class="pain-cards">
+                <div class="pain-card">
+                    <div class="pain-emoji">🎵</div>
+                    <p>"I can hum every note, but I freeze when the Korean verse hits."</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-emoji">📱</div>
+                    <p>"I stare at ㅎㅏㄴ and have absolutely no idea where to start."</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-emoji">🏟️</div>
+                    <p>"50,000 fans are chanting and I'm just moving my lips."</p>
+                </div>
+            </div>
+            <p class="pain-solution">AlphaCombi solves this in <strong>seconds</strong>.</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: HOW IT WORKS (3 STEPS)            -->
+    <!-- ============================================ -->
+    <section id="how" class="section section-pink">
+        <div class="container">
+            <h2>Three Taps. <span class="accent">That's It.</span></h2>
+            <p class="section-sub">Just paste lyrics and tap Convert</p>
+            <div class="screenshot-showcase">
+                <img src="images/ss-three-taps.png" alt="Three steps: Paste lyrics, tap Convert, read along"
+                    class="screenshot-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: SEE INSIDE LETTERS (LEGO)         -->
+    <!-- ============================================ -->
+    <section id="lego" class="section section-white">
+        <div class="container">
+            <h2>See Inside <span class="accent">Korean Letters</span><br>Like <span class="accent">LEGO</span></h2>
+            <p class="section-sub">Each letter is assembled from pieces — see how, in alphabet letters you already know.
+            </p>
+            <div class="screenshot-showcase">
+                <img src="images/ss-lego.png"
+                    alt="Korean letter decomposition like LEGO blocks, Cluster and Disperse modes"
+                    class="screenshot-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: SYNC SCROLL                       -->
+    <!-- ============================================ -->
+    <section id="sync" class="section section-pink">
+        <div class="container">
+            <h2><span class="accent">K-POP Lyrics</span> You Can Actually Read</h2>
+            <p class="section-sub">Korean on top. Alphabet on bottom. Scroll together. Read together.</p>
+            <div class="screenshot-showcase">
+                <img src="images/ss-sync-scroll.png"
+                    alt="Synchronized scroll showing Korean lyrics and AlphaCombi output side by side"
+                    class="screenshot-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: CONCERT-READY FEATURES            -->
+    <!-- ============================================ -->
+    <section id="features" class="section section-white">
+        <div class="container">
+            <h2>Built for <span class="accent">Concert Day</span></h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-img-wrap">
+                        <img src="images/ss-save-setlist.png" alt="Save and Load lyrics for concert setlist"
+                            class="feature-img" loading="lazy">
+                    </div>
+                    <h3>Save Your Setlist</h3>
+                    <p>Save multiple songs. Load them anytime — even offline on the plane to the concert.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img-wrap">
+                        <img src="images/ss-pronunciation.png" alt="Pronunciation hint bottom sheet" class="feature-img"
+                            loading="lazy">
+                    </div>
+                    <h3>Pronunciation Hint</h3>
+                    <p>Not sure how to say it? Tap ⓘ for instant pronunciation hints based on English words.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img-wrap feature-img-cover">
+                        <img src="images/airplane-practice.png" alt="Practicing lyrics on a plane"
+                            class="feature-img-photo" loading="lazy">
+                    </div>
+                    <h3>Works Offline</h3>
+                    <p>No WiFi at the venue? No problem. Everything runs on your phone — even at 35,000 feet.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img-wrap feature-img-icon">
+                        <div class="feature-icon">🌐</div>
+                    </div>
+                    <h3>Search Lyrics Easily</h3>
+                    <p>Tap the globe icon to find lyrics on the web, copy, and paste right into the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: CONCERT CALENDAR                  -->
+    <!-- ============================================ -->
+    <section id="calendar" class="section section-dark">
+        <div class="calendar-bg"></div>
+        <div class="container calendar-container">
+            <h2>🎤 K-POP <span class="accent">Concert Calendar</span> 2026</h2>
+            <p class="section-sub-light">Your favorite groups are touring. Get ready before they arrive.</p>
+
+            <div class="calendar-tabs">
+                <button class="cal-tab active" data-group="bts">BTS</button>
+                <button class="cal-tab" data-group="twice">TWICE</button>
+                <button class="cal-tab" data-group="svt">SEVENTEEN</button>
+                <button class="cal-tab" data-group="ateez">ATEEZ</button>
+                <button class="cal-tab" data-group="idle">(G)I-DLE</button>
+                <button class="cal-tab" data-group="skz">Stray Kids</button>
+            </div>
+
+            <!-- BTS -->
+            <div class="cal-panel active" id="cal-bts">
+                <h3>BTS — ARIRANG World Tour 2026–2027</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue / Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cal-highlight">
+                            <td>Mar 20</td>
+                            <td>—</td>
+                            <td>🎵 Album "ARIRANG" Release (14 tracks)</td>
+                        </tr>
+                        <tr class="cal-highlight">
+                            <td>Mar 21</td>
+                            <td>Seoul, Gwanghwamun</td>
+                            <td>🔴 Comeback Live on Netflix (FREE)</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 9, 11–12</td>
+                            <td>Goyang, Korea</td>
+                            <td>Goyang Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 17–18</td>
+                            <td>Tokyo, Japan</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 25–26, 28</td>
+                            <td>Tampa, USA</td>
+                            <td>Raymond James Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>May 2–3</td>
+                            <td>El Paso, USA</td>
+                            <td>Sun Bowl Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>May 7, 9–10</td>
+                            <td>Mexico City</td>
+                            <td>Estadio GNP Seguros</td>
+                        </tr>
+                        <tr>
+                            <td>May 16–17, 19</td>
+                            <td>Stanford, USA</td>
+                            <td>Stanford Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>May 23–24, 27–28</td>
+                            <td>Las Vegas, USA</td>
+                            <td>Allegiant Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 12–13</td>
+                            <td>Busan, Korea</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 26–27</td>
+                            <td>Madrid, Spain</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 1–2</td>
+                            <td>Brussels, Belgium</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 6–7</td>
+                            <td>London, UK</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 11–12</td>
+                            <td>Munich, Germany</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 17–18</td>
+                            <td>Paris, France</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 1–2</td>
+                            <td>East Rutherford, USA</td>
+                            <td>MetLife Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 5–6</td>
+                            <td>Foxborough, USA</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 10–11</td>
+                            <td>Baltimore, USA</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 15–16</td>
+                            <td>Arlington, USA</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 22–23</td>
+                            <td>Toronto, Canada</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 27–28</td>
+                            <td>Chicago, USA</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Sep 1–2, 5–6</td>
+                            <td>Los Angeles, USA</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 2–3</td>
+                            <td>Bogotá, Colombia</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 9–10</td>
+                            <td>Lima, Peru</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 16–17</td>
+                            <td>Santiago, Chile</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 23–24</td>
+                            <td>Buenos Aires, Argentina</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 28, 30–31</td>
+                            <td>São Paulo, Brazil</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 19, 21–22</td>
+                            <td>Kaohsiung, Taiwan</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 3, 5–6</td>
+                            <td>Bangkok, Thailand</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 12–13</td>
+                            <td>Kuala Lumpur, Malaysia</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 17, 19–20, 22</td>
+                            <td>Singapore</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 26–27</td>
+                            <td>Jakarta, Indonesia</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr class="cal-year">
+                            <td colspan="3">2027</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 12–13</td>
+                            <td>Melbourne, Australia</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 20–21</td>
+                            <td>Sydney, Australia</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 4, 6–7</td>
+                            <td>Hong Kong</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 13–14</td>
+                            <td>Manila, Philippines</td>
+                            <td>TBD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TWICE -->
+            <div class="cal-panel" id="cal-twice">
+                <h3>TWICE — THIS IS FOR World Tour 2026</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan 9–10</td>
+                            <td>Vancouver</td>
+                            <td>Rogers Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 13–14</td>
+                            <td>Seattle</td>
+                            <td>Climate Pledge Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 17–18</td>
+                            <td>Oakland</td>
+                            <td>Oakland Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 21–22, 24–25</td>
+                            <td>Los Angeles</td>
+                            <td>Kia Forum</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 28</td>
+                            <td>Phoenix</td>
+                            <td>Mortgage Matchup Center</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 31 – Feb 1</td>
+                            <td>Dallas</td>
+                            <td>American Airlines Center</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 13–14</td>
+                            <td>Washington D.C.</td>
+                            <td>Capital One Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 18, 20–21</td>
+                            <td>New York</td>
+                            <td>UBS Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 24</td>
+                            <td>Philadelphia</td>
+                            <td>Xfinity Mobile Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 27</td>
+                            <td>Atlanta</td>
+                            <td>State Farm Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 3</td>
+                            <td>Montreal</td>
+                            <td>Bell Centre</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 6</td>
+                            <td>Hamilton</td>
+                            <td>TD Coliseum</td>
+                        </tr>
+                        <tr>
+                            <td>May 9+</td>
+                            <td>Europe</td>
+                            <td>Lisbon, Barcelona, Paris, Berlin, London…</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- SEVENTEEN -->
+            <div class="cal-panel" id="cal-svt">
+                <h3>SEVENTEEN — NEW_ World Tour 2025–2026</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feb 28 – Mar 1</td>
+                            <td>Hong Kong</td>
+                            <td>Kai Tak Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 7</td>
+                            <td>Singapore</td>
+                            <td>National Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 14–15</td>
+                            <td>Bangkok</td>
+                            <td>Suphachalasai Stadium</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ATEEZ -->
+            <div class="cal-panel" id="cal-ateez">
+                <h3>ATEEZ — IN YOUR FANTASY World Tour 2025–2026</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan 24</td>
+                            <td>Taipei</td>
+                            <td>NTSU Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 31</td>
+                            <td>Jakarta</td>
+                            <td>ICE BSD Hall</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 22</td>
+                            <td>Singapore</td>
+                            <td>Singapore Indoor Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 2–3</td>
+                            <td>Melbourne</td>
+                            <td>Rod Laver Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 6–7</td>
+                            <td>Sydney</td>
+                            <td>Qudos Bank Arena</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 14</td>
+                            <td>Manila</td>
+                            <td>Smart Araneta Coliseum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- (G)I-DLE -->
+            <div class="cal-panel" id="cal-idle">
+                <h3>(G)I-DLE — Syncopation World Tour 2026</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feb 21–22</td>
+                            <td>Seoul</td>
+                            <td>KSPO Dome</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 7</td>
+                            <td>Taipei</td>
+                            <td>Taipei Dome</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 13</td>
+                            <td>Singapore</td>
+                            <td>Singapore Indoor Stadium</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2</td>
+                            <td>Hamilton</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 4</td>
+                            <td>Newark</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td>More dates TBA</td>
+                            <td>North America</td>
+                            <td>Multiple cities</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Stray Kids -->
+            <div class="cal-panel" id="cal-skz">
+                <h3>Stray Kids — 2026 World Tour</h3>
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>Venue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mar 14+</td>
+                            <td>Seoul</td>
+                            <td>Kick-off (details TBA)</td>
+                        </tr>
+                        <tr>
+                            <td>TBA</td>
+                            <td>Multiple cities</td>
+                            <td>New album + world tour announced</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="cal-disclaimer">📅 Dates are subject to change. For tickets and latest updates:<br>
+                <a href="https://www.soompi.com/article/1797016wpp/2026-k-pop-tour-masterlist-concerts-fan-meetings-and-more"
+                    target="_blank" rel="noopener">Soompi Tour Masterlist</a> ·
+                <a href="https://www.ticketmaster.com" target="_blank" rel="noopener">Ticketmaster</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: FINAL CTA                         -->
+    <!-- ============================================ -->
+    <section id="cta" class="section section-cta">
+        <div class="container">
+            <h2>The Album Drops.<br>The Lyrics Go Live.<br><span class="accent-white">You're Ready.</span></h2>
+            <p class="cta-sub">Don't just watch the concert. <strong>Be part of it.</strong></p>
+            <div class="store-badges">
+                <a href="#" class="store-badge" aria-label="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store">
+                </a>
+                <a href="#" class="store-badge" aria-label="Get it on Google Play">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: DISCLAIMER                        -->
+    <!-- ============================================ -->
+    <section id="note" class="section section-note">
+        <div class="container">
+            <h2>A Note About This App</h2>
+            <p>AlphaCombi maps Korean letters to alphabet letters based on the <strong>Revised Romanization of Korean
+                    (RR)</strong>, South Korea's official romanization standard. <strong>It is NOT a phonetic
+                    pronunciation guide</strong> — Korean has sound-change rules (linking, nasalization, etc.) that are
+                not reflected here, because showing them would obscure the letter-assembly structure. Think of it as a
+                <em>cheat sheet for reading along</em>, not a Korean lesson.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10: FOOTER                           -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <img src="images/app-icon.png" alt="K-POP AlphaCombi" class="footer-icon">
+                <span class="footer-name">K-POP AlphaCombi</span>
+            </div>
+            <div class="store-badges store-badges-sm">
+                <a href="#" class="store-badge" aria-label="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store">
+                </a>
+                <a href="#" class="store-badge" aria-label="Get it on Google Play">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get it on Google Play">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="https://juksanvi.github.io/handidim-legal/privacy-policy.html" target="_blank"
+                    rel="noopener">Privacy Policy</a>
+                <span class="footer-sep">·</span>
+                <a href="https://juksanvi.github.io/handidim-legal/support.html" target="_blank"
+                    rel="noopener">Support</a>
+            </div>
+            <p class="footer-copy">© 2026 Handidim · handidimx@gmail.com</p>
+            <p class="footer-sejong">Hangul was invented in 1443 by King Sejong the Great — so that ordinary people
+                could read and write easily.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

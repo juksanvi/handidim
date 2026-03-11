@@ -1,0 +1,662 @@
+/* ============================================
+   K-POP AlphaCombi Landing Page
+   ============================================ */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1E293B;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Accent Colors --- */
+.accent {
+    color: #E91E8C;
+}
+
+.accent-white {
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(233, 30, 140, 0.4);
+}
+
+/* --- Section Base --- */
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-white {
+    background: #fff;
+}
+
+.section-pink {
+    background: #FDF2F8;
+}
+
+.section h2 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.section-sub,
+.section-sub-light {
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 40px;
+    color: #64748B;
+}
+
+.section-sub-light {
+    color: #CBD5E1;
+}
+
+/* ============================================
+   SECTION 1: HERO
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/hero-concert.png') center center / cover no-repeat;
+    color: #fff;
+    padding: 40px 24px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(20, 0, 30, 0.75) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.hero-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(233, 30, 140, 0.4);
+}
+
+.hero-app-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-sub {
+    font-size: clamp(1rem, 2.8vw, 1.25rem);
+    margin-bottom: 32px;
+    opacity: 0.92;
+    line-height: 1.7;
+}
+
+.hero-note {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 16px;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    color: #fff;
+}
+
+.scroll-arrow {
+    font-size: 1.4rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* --- Store Badges --- */
+.store-badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.store-badge img {
+    height: 48px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.store-badge:hover img {
+    transform: scale(1.05);
+}
+
+.store-badges-sm .store-badge img {
+    height: 40px;
+}
+
+/* ============================================
+   SECTION 2: PAIN POINT
+   ============================================ */
+.pain-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.pain-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pain-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pain-emoji {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+.pain-card p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #475569;
+}
+
+.pain-solution {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1E293B;
+}
+
+/* ============================================
+   SECTION 3, 4, 5: SCREENSHOT SHOWCASES
+   ============================================ */
+.screenshot-showcase {
+    text-align: center;
+}
+
+.screenshot-img {
+    max-width: 100%;
+    width: 720px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* ============================================
+   SECTION 6: FEATURES GRID
+   ============================================ */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FDF2F8;
+}
+
+.feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+}
+
+.feature-img-cover {
+    aspect-ratio: 4 / 3;
+    background: #1E293B;
+}
+
+.feature-img-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-img-icon {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #FDF2F8, #FCE7F3);
+}
+
+.feature-icon {
+    font-size: 4rem;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    padding: 16px 20px 4px;
+    color: #1E293B;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    padding: 0 20px 20px;
+    color: #64748B;
+}
+
+/* ============================================
+   SECTION 7: CONCERT CALENDAR
+   ============================================ */
+.section-dark {
+    background: #0F172A;
+    color: #F1F5F9;
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-bg {
+    position: absolute;
+    inset: 0;
+    background: url('images/stadium-lightsticks.png') center center / cover no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+}
+
+.calendar-container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-dark h2 {
+    color: #F1F5F9;
+}
+
+/* Calendar Tabs */
+.calendar-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.cal-tab {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #334155;
+    border-radius: 999px;
+    background: transparent;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cal-tab:hover {
+    border-color: #E91E8C;
+    color: #E91E8C;
+}
+
+.cal-tab.active {
+    background: #E91E8C;
+    border-color: #E91E8C;
+    color: #fff;
+}
+
+/* Calendar Panels */
+.cal-panel {
+    display: none;
+}
+
+.cal-panel.active {
+    display: block;
+}
+
+.cal-panel h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #F9A8D4;
+}
+
+.cal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.cal-table thead th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid #334155;
+    color: #94A3B8;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cal-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #1E293B;
+    color: #CBD5E1;
+}
+
+.cal-table tbody tr:hover {
+    background: rgba(233, 30, 140, 0.08);
+}
+
+.cal-highlight td {
+    color: #F9A8D4 !important;
+    font-weight: 600;
+    background: rgba(233, 30, 140, 0.12);
+}
+
+.cal-year td {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #E91E8C;
+    padding: 16px 12px 8px;
+    border-bottom: 2px solid #334155;
+    letter-spacing: 0.1em;
+}
+
+.cal-disclaimer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.88rem;
+    color: #64748B;
+}
+
+.cal-disclaimer a {
+    color: #F9A8D4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cal-disclaimer a:hover {
+    color: #E91E8C;
+}
+
+/* ============================================
+   SECTION 8: FINAL CTA
+   ============================================ */
+.section-cta {
+    background: linear-gradient(135deg, #E91E8C 0%, #BE185D 50%, #9D174D 100%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 24px;
+}
+
+.section-cta h2 {
+    color: #fff;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 16px;
+}
+
+.cta-sub {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 32px;
+    opacity: 0.92;
+}
+
+/* ============================================
+   SECTION 9: DISCLAIMER / NOTE
+   ============================================ */
+.section-note {
+    background: #F8FAFC;
+    padding: 60px 0;
+}
+
+.section-note h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.section-note p {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.8;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: #111827;
+    color: #94A3B8;
+    text-align: center;
+    padding: 48px 24px 32px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.footer-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #F1F5F9;
+}
+
+.footer-links {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #CBD5E1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-links a:hover {
+    color: #E91E8C;
+}
+
+.footer-sep {
+    margin: 0 8px;
+    color: #475569;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.footer-sejong {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #64748B;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-sub br {
+        display: none;
+    }
+
+    .pain-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .screenshot-img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .cal-table {
+        font-size: 0.82rem;
+    }
+
+    .cal-table thead th,
+    .cal-table tbody td {
+        padding: 8px 8px;
+    }
+
+    .calendar-tabs {
+        gap: 6px;
+    }
+
+    .cal-tab {
+        font-size: 0.82rem;
+        padding: 8px 14px;
+    }
+
+    .section-cta {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .store-badge img {
+        height: 40px;
+    }
+
+    .feature-img-wrap {
+        aspect-ratio: 1 / 1;
+    }
+}
