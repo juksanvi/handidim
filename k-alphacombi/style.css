@@ -252,8 +252,15 @@ a {
 
 .pain-solution {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
     color: #1E293B;
+    margin-top: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.pain-solution strong {
+    color: #E91E8C;
 }
 
 /* ============================================
