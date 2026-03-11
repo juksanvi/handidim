@@ -320,15 +320,6 @@ a {
     object-fit: cover;
 }
 
-.feature-img-icon {
-    aspect-ratio: 4 / 3;
-    background: linear-gradient(135deg, #FDF2F8, #FCE7F3);
-}
-
-.feature-icon {
-    font-size: 4rem;
-}
-
 .feature-card h3 {
     font-size: 1.15rem;
     padding: 16px 20px 4px;
