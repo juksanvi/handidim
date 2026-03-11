@@ -263,6 +263,15 @@ a {
     color: #E91E8C;
 }
 
+.pain-solution-sub {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    color: #64748B;
+    margin-top: 8px;
+}
+
 /* ============================================
    SECTION 3, 4, 5: SCREENSHOT SHOWCASES
    ============================================ */
@@ -573,6 +582,25 @@ a {
 .footer-copy {
     font-size: 0.85rem;
     margin-bottom: 16px;
+}
+
+.footer-rights {
+    font-size: 0.75rem;
+    color: #475569;
+    max-width: 600px;
+    margin: 16px auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.footer-rights a {
+    color: #94A3B8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footer-rights a:hover {
+    color: #E91E8C;
 }
 
 .footer-sejong {
