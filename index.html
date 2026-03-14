@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HanDiDim — Apps for K-Culture Fans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0F172A;
+            color: #F8FAFC;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo-text {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .logo-text span {
+            color: #E91E8C;
+        }
+
+        .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: #94A3B8;
+            margin-bottom: 48px;
+        }
+
+        .app-card {
+            background: #1E293B;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 400px;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(233, 30, 140, 0.2);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 16px;
+        }
+
+        .app-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .app-desc {
+            font-size: 0.95rem;
+            color: #94A3B8;
+            line-height: 1.6;
+        }
+
+        .app-arrow {
+            display: inline-block;
+            margin-top: 16px;
+            color: #E91E8C;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+
+        footer a {
+            color: #64748B;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #E91E8C;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="logo-text">Handi<span>dim</span></h1>
+    <p class="tagline">Apps for K-Culture Fans</p>
+
+    <a href="/k-alphacombi/" class="app-card">
+        <img src="/k-alphacombi/images/app-icon.png" alt="K-POP AlphaCombi" class="app-icon">
+        <h2 class="app-name">K-POP AlphaCombi</h2>
+        <p class="app-desc">Can't read Korean? Paste any K-POP lyrics and get alphabet letters you can actually read —
+            then practice and sing along at the concert.</p>
+        <span class="app-arrow">Learn more →</span>
+    </a>
+
+    <footer>
+        <p>© 2026 HanDiDim · <a href="mailto:handidimx@gmail.com">handidimx@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>
