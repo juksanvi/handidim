@@ -201,6 +201,12 @@ a {
     flex-wrap: wrap;
 }
 
+.store-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .store-badge img {
     height: 48px;
     width: auto;
@@ -213,6 +219,25 @@ a {
 
 .store-badges-sm .store-badge img {
     height: 40px;
+}
+
+.badge-coming-soon {
+    font-size: 10px;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.hero .badge-coming-soon {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.section-cta .badge-coming-soon {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer .badge-coming-soon {
+    color: rgba(255, 255, 255, 0.55);
 }
 
 /* ============================================
