@@ -69,7 +69,7 @@ a {
 }
 
 .section-pink {
-    background: #FDF2F8;
+    background: linear-gradient(160deg, #FDF2F8 0%, #F5F0FF 100%);
 }
 
 .section h2 {
@@ -309,6 +309,13 @@ a {
     width: 720px;
     margin: 0 auto;
     border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.screenshot-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
 }
 
 /* ============================================
@@ -330,7 +337,7 @@ a {
 
 .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
 }
 
 .feature-img-wrap {
@@ -674,6 +681,7 @@ a {
         width: 100%;
         border-radius: 0;
     }
+
 
     .cal-table {
         font-size: 0.82rem;
