@@ -719,3 +719,216 @@ a {
         aspect-ratio: 1 / 1;
     }
 }
+
+/* ============================================ */
+/* Hero trust line                              */
+/* ============================================ */
+.hero-trust {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================ */
+/* Calendar — Show past concerts toggle         */
+/* ============================================ */
+.cal-toggle-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 24px;
+}
+
+.cal-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.cal-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cal-toggle input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ff4d8d;
+    cursor: pointer;
+}
+
+/* Past row styling when toggle is on */
+.cal-table tbody tr.cal-past {
+    display: none;
+}
+
+.cal-table.show-past tbody tr.cal-past {
+    display: table-row;
+    opacity: 0.45;
+    font-style: italic;
+}
+
+.cal-table.show-past tbody tr.cal-past td:first-child::before {
+    content: "✓ ";
+    color: #888;
+}
+
+/* Calendar source link */
+.cal-source {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: right;
+}
+
+.cal-source a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+}
+
+.cal-note-light {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    margin: 8px 0 16px;
+    font-style: italic;
+}
+
+/* Make tab bar scrollable on mobile when many tabs */
+.calendar-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.calendar-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.calendar-tabs::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+/* ============================================ */
+/* FAQ Section                                  */
+/* ============================================ */
+.faq-list {
+    max-width: 760px;
+    margin: 32px auto 0;
+}
+
+.faq-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.faq-item[open] {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    background: #fff;
+}
+
+.faq-item summary {
+    padding: 18px 24px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 48px;
+    color: #222;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #ff4d8d;
+    font-weight: 400;
+    transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    padding: 0 24px 20px;
+    margin: 0;
+    color: #555;
+    line-height: 1.65;
+    font-size: 0.98rem;
+}
+
+/* ============================================ */
+/* Mobile Sticky CTA Bar                        */
+/* ============================================ */
+.mobile-sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 12px;
+    gap: 8px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-sticky-cta.visible {
+    display: flex;
+}
+
+.mobile-sticky-cta a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    background: linear-gradient(135deg, #ff4d8d, #ff7eb3);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255, 77, 141, 0.25);
+}
+
+.mobile-sticky-cta a:active {
+    transform: scale(0.98);
+}
+
+@media (min-width: 769px) {
+    .mobile-sticky-cta {
+        display: none !important;
+    }
+}
+
+/* On mobile, add bottom padding to avoid sticky CTA covering footer */
+@media (max-width: 768px) {
+    body.has-sticky-cta {
+        padding-bottom: 70px;
+    }
+}

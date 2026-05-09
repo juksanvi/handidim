@@ -64,3 +64,62 @@ document.addEventListener('DOMContentLoaded', function () {
     staggerCards('.feature-card', 100);
 
 });
+/* ============================================ */
+/* Auto-hide past concerts                      */
+/* ============================================ */
+(function () {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    document.querySelectorAll('.cal-table tbody tr[data-end-date]').forEach(row => {
+        const endDateStr = row.getAttribute('data-end-date');
+        if (!endDateStr) return;
+        const endDate = new Date(endDateStr + 'T23:59:59');
+        if (endDate < today) {
+            row.classList.add('cal-past');
+        }
+    });
+
+    /* Show past concerts toggle */
+    const toggle = document.getElementById('show-past-toggle');
+    if (toggle) {
+        toggle.addEventListener('change', function () {
+            document.querySelectorAll('.cal-table').forEach(table => {
+                if (this.checked) {
+                    table.classList.add('show-past');
+                } else {
+                    table.classList.remove('show-past');
+                }
+            });
+        });
+    }
+})();
+
+/* ============================================ */
+/* Mobile Sticky CTA — show after Hero          */
+/* ============================================ */
+(function () {
+    const sticky = document.getElementById('mobileStickyCta');
+    const hero = document.getElementById('hero');
+    if (!sticky || !hero) return;
+
+    function updateSticky() {
+        if (window.innerWidth > 768) {
+            sticky.classList.remove('visible');
+            document.body.classList.remove('has-sticky-cta');
+            return;
+        }
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        if (heroBottom < 0) {
+            sticky.classList.add('visible');
+            document.body.classList.add('has-sticky-cta');
+        } else {
+            sticky.classList.remove('visible');
+            document.body.classList.remove('has-sticky-cta');
+        }
+    }
+
+    window.addEventListener('scroll', updateSticky, { passive: true });
+    window.addEventListener('resize', updateSticky);
+    updateSticky();
+})();
