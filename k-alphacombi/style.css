@@ -1149,3 +1149,34 @@ a {
         display: block;
     }
 }
+
+/* ============================================ */
+/* Hero Demo Video Section                      */
+/* ============================================ */
+.hero-demo-section {
+    padding: 64px 0;
+}
+
+.hero-demo-video-wrap {
+    max-width: 360px;
+    margin: 32px auto 0;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    background: #000;
+    aspect-ratio: 720 / 1566;
+}
+
+.hero-demo-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .hero-demo-video-wrap {
+        max-width: 280px;
+        border-radius: 24px;
+    }
+}
