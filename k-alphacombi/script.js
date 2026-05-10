@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const lyricsBySample = {
         '1': '사랑해 영원히<br>별처럼 빛나는 너!',
-        '2': 'Forever ever 우리 사랑<br>우주가 끝날 때까지 yeah'
+        '2': 'Forever ever 우리 사랑<br>우주가 끝날 때까지 Yeah'
     };
 
     function updateDemo() {
