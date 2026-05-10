@@ -1109,6 +1109,20 @@ a {
     }
 }
 
+/* Backup & Share card - mobile (under 768px) */
+.feature-card-wide .feature-img-wrap.feature-img-dual {
+    aspect-ratio: auto;
+    padding: 20px 12px;
+    gap: 12px;
+    background: #FDF2F8;
+}
+
+.feature-card-wide .feature-img-wrap.feature-img-dual .feature-img {
+    width: 48%;
+    max-width: 160px;
+    height: auto;
+}
+
 /* Wide card spans 2 columns on tablet/desktop */
 @media (min-width: 768px) {
     .feature-card-wide {
