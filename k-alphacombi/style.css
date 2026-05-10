@@ -1115,14 +1115,13 @@ a {
         grid-column: span 2;
         align-self: start;
         padding: 0;
-        border: none;
     }
 
     .feature-card-wide .feature-img-wrap.feature-img-dual {
         aspect-ratio: auto;
         width: 100%;
         max-width: none;
-        padding: 32px 24px 0;
+        padding: 32px 24px 12px;
         margin: 0;
         background: #FDF2F8;
         gap: 120px;
@@ -1132,7 +1131,7 @@ a {
     .feature-card-wide h3 {
         padding-left: 24px;
         padding-right: 24px;
-        margin-top: 12px;
+        margin-top: 0px;
     }
 
     .feature-card-wide p {
