@@ -932,3 +932,160 @@ a {
         padding-bottom: 70px;
     }
 }
+
+/* ============================================ */
+/* Live Demo Section                            */
+/* ============================================ */
+.demo-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 24px;
+}
+
+.demo-control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.demo-label {
+    font-size: 0.92rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.demo-toggle-group {
+    display: inline-flex;
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 4px;
+    gap: 2px;
+}
+
+.demo-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.demo-toggle:hover {
+    color: #222;
+}
+
+.demo-toggle.active {
+    background: #fff;
+    color: #ff4d8d;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.demo-toggle-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 77, 141, 0.15);
+    color: #ff4d8d;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.demo-toggle.active .demo-toggle-num {
+    background: linear-gradient(135deg, #ff4d8d, #ff7eb3);
+    color: #fff;
+}
+
+.demo-toggle-text {
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .demo-toggle-text {
+        display: none;
+    }
+
+    .demo-toggle {
+        padding: 8px 12px;
+    }
+}
+
+.demo-lyrics-source {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #fff5f9, #fef0f5);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 77, 141, 0.15);
+    text-align: center;
+}
+
+.demo-lyrics-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.demo-lyrics-text {
+    display: block;
+    font-size: 1.15rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.demo-image-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.25s ease;
+}
+
+.demo-image.fading {
+    opacity: 0;
+}
+
+.demo-caption {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.demo-caption strong {
+    color: #ff4d8d;
+    font-weight: 600;
+}

@@ -112,6 +112,60 @@
     </section>
 
     <!-- ============================================ -->
+    <!-- SECTION 3.5: SEE IT IN ACTION (LIVE DEMO)    -->
+    <!-- ============================================ -->
+    <section id="demo" class="section section-white">
+        <div class="container">
+            <h2>See It <span class="accent">In Action</span></h2>
+            <p class="section-sub">Real K-POP-style lyrics, converted by the app. Try the toggles below.</p>
+
+            <div class="demo-controls">
+                <div class="demo-control-group">
+                    <span class="demo-label">Sample:</span>
+                    <div class="demo-toggle-group" role="tablist" aria-label="Sample selector">
+                        <button class="demo-toggle active" data-sample="1" role="tab" aria-selected="true">
+                            <span class="demo-toggle-num">1</span>
+                            <span class="demo-toggle-text">Korean only</span>
+                        </button>
+                        <button class="demo-toggle" data-sample="2" role="tab" aria-selected="false">
+                            <span class="demo-toggle-num">2</span>
+                            <span class="demo-toggle-text">Korean + English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="demo-control-group">
+                    <span class="demo-label">Mode:</span>
+                    <div class="demo-toggle-group" role="tablist" aria-label="Mode selector">
+                        <button class="demo-toggle active" data-mode="cluster" role="tab" aria-selected="true">
+                            Cluster
+                        </button>
+                        <button class="demo-toggle" data-mode="disperse" role="tab" aria-selected="false">
+                            Disperse
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-lyrics-source" id="demoLyricsSource">
+                <span class="demo-lyrics-label">Korean lyrics:</span>
+                <span class="demo-lyrics-text" id="demoLyricsText">사랑해 영원히<br>별처럼 빛나는 너!</span>
+            </div>
+
+            <div class="demo-image-wrap">
+                <img id="demoImage" src="images/demo-sample1-cluster.png"
+                    alt="Sample 1 in Cluster mode — Korean lyrics converted to AlphaCombi" class="demo-image"
+                    loading="lazy">
+            </div>
+
+            <p class="demo-caption">
+                <strong>Cluster</strong> stacks letters like the original Korean block.
+                <strong>Disperse</strong> reads them left to right.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
     <!-- SECTION 4: SEE INSIDE LETTERS (LEGO)         -->
     <!-- ============================================ -->
     <section id="lego" class="section section-white">

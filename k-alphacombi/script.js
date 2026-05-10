@@ -123,3 +123,77 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', updateSticky);
     updateSticky();
 })();
+
+/* ============================================ */
+/* Live Demo — sample & mode toggle             */
+/* ============================================ */
+(function () {
+    const demoImage = document.getElementById('demoImage');
+    const lyricsText = document.getElementById('demoLyricsText');
+    if (!demoImage || !lyricsText) return;
+
+    const sampleButtons = document.querySelectorAll('.demo-toggle[data-sample]');
+    const modeButtons = document.querySelectorAll('.demo-toggle[data-mode]');
+
+    let currentSample = '1';
+    let currentMode = 'cluster';
+
+    const lyricsBySample = {
+        '1': '사랑해 영원히<br>별처럼 빛나는 너!',
+        '2': 'Forever ever 우리 사랑<br>우주가 끝날 때까지 yeah'
+    };
+
+    function updateDemo() {
+        const newSrc = `images/demo-sample${currentSample}-${currentMode}.png`;
+        const newAlt = `Sample ${currentSample} in ${currentMode} mode — Korean lyrics converted to AlphaCombi`;
+
+        // Fade out → swap → fade in
+        demoImage.classList.add('fading');
+        setTimeout(() => {
+            demoImage.src = newSrc;
+            demoImage.alt = newAlt;
+            lyricsText.innerHTML = lyricsBySample[currentSample];
+            demoImage.classList.remove('fading');
+        }, 200);
+    }
+
+    function setActive(buttons, attr, value) {
+        buttons.forEach(btn => {
+            const isActive = btn.getAttribute(attr) === value;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+    }
+
+    sampleButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const sample = this.getAttribute('data-sample');
+            if (sample === currentSample) return;
+            currentSample = sample;
+            setActive(sampleButtons, 'data-sample', sample);
+            updateDemo();
+            if (typeof gtag === 'function') {
+                gtag('event', 'demo_sample_change', {
+                    event_category: 'demo',
+                    event_label: 'sample_' + sample
+                });
+            }
+        });
+    });
+
+    modeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const mode = this.getAttribute('data-mode');
+            if (mode === currentMode) return;
+            currentMode = mode;
+            setActive(modeButtons, 'data-mode', mode);
+            updateDemo();
+            if (typeof gtag === 'function') {
+                gtag('event', 'demo_mode_change', {
+                    event_category: 'demo',
+                    event_label: 'mode_' + mode
+                });
+            }
+        });
+    });
+})();
