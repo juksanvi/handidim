@@ -1089,3 +1089,63 @@ a {
     color: #ff4d8d;
     font-weight: 600;
 }
+
+.feature-img-dual {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.feature-img-dual .feature-img {
+    width: 48%;
+    max-width: 180px;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .feature-img-dual {
+        gap: 8px;
+    }
+}
+
+/* Wide card spans 2 columns on tablet/desktop */
+@media (min-width: 768px) {
+    .feature-card-wide {
+        grid-column: span 2;
+        align-self: start;
+        padding: 0;
+        border: none;
+    }
+
+    .feature-card-wide .feature-img-wrap.feature-img-dual {
+        aspect-ratio: auto;
+        width: 100%;
+        max-width: none;
+        padding: 32px 24px 0;
+        margin: 0;
+        background: #FDF2F8;
+        gap: 120px;
+        justify-content: center;
+    }
+
+    .feature-card-wide h3 {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 12px;
+    }
+
+    .feature-card-wide p {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 24px;
+    }
+
+    .feature-card-wide .feature-img-wrap.feature-img-dual .feature-img {
+        width: auto;
+        max-width: 350px;
+        height: auto;
+        padding: 0;
+        display: block;
+    }
+}
