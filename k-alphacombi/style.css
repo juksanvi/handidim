@@ -434,6 +434,28 @@ a {
     color: #E91E8C;
 }
 
+.cal-tab:focus {
+    outline: none;
+}
+
+.cal-tab:focus-visible {
+    outline: 2px solid #E91E8C;
+    outline-offset: 2px;
+}
+
+/* 모바일에서 hover sticky 방지 */
+@media (hover: none) {
+    .cal-tab:hover {
+        border-color: #334155;
+        color: #94A3B8;
+    }
+
+    .cal-tab.active:hover {
+        border-color: #E91E8C;
+        color: #fff;
+    }
+}
+
 .cal-tab.active {
     background: #E91E8C;
     border-color: #E91E8C;

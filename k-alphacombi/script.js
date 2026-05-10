@@ -197,3 +197,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 })();
+
+// 페이지 로드 시 콘서트 탭 스크롤을 맨 왼쪽으로 초기화
+window.addEventListener('load', () => {
+    const tabs = document.querySelector('.calendar-tabs');
+    if (tabs) tabs.scrollLeft = 0;
+});
